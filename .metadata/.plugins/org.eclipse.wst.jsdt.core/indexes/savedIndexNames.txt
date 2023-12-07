@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+L:\Backend_Dev\FullStack\Ebook\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1894625343.index

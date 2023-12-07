@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+L:\Backend_Dev\FullStack\Ebook\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2124335275.index
+\Ebook-App\src\main\resources
