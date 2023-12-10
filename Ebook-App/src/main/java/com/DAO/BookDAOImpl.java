@@ -2,6 +2,9 @@ package com.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.entity.BookDtls;
 
@@ -35,6 +38,32 @@ public class BookDAOImpl implements BookDAO {
 			e.printStackTrace();
 		}
 		return f;
+	}
+
+	@Override
+	public List<BookDtls> getAllBooks() {
+		List<BookDtls> list = new ArrayList<BookDtls>();
+		BookDtls b = null;
+		try {
+			String sql = "select * from book_dtls";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				b = new BookDtls();
+				b.setBookId(rs.getInt(1));
+				b.setBookname(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getString(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+				list.add(b);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
 	}
 
 }

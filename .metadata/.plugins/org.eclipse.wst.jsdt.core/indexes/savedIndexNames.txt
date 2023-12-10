@@ -5,5 +5,4 @@ INDEX VERSION 1.4+L:\Backend_Dev\FullStack\Ebook\.metadata\.plugins\org.eclipse.
 742592052.index
 3829981424.index
 3255327143.index
-770441918.index
 3062088038.index

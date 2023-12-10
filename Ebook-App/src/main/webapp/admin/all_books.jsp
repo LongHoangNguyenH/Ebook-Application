@@ -1,3 +1,9 @@
+<%@page import="com.entity.BookDtls"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.DB.DBConnect"%>
+<%@page import="com.DAO.BookDAOImpl"%>
+<%@page import="com.DAO.BookDAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -13,6 +19,7 @@
 	<table class="table table-striped">
 		<thead class="bg-primary text-white">
 			<tr>
+				<th scope="col">ID</th>
 				<th scope="col">Image</th>
 				<th scope="col">Book Name</th>
 				<th scope="col">Author Name</th>
@@ -23,22 +30,31 @@
 			</tr>
 		</thead>
 		<tbody>
+			<%
+			BookDAOImpl dao = new BookDAOImpl(DBConnect.getConn());
+			List<BookDtls> list = dao.getAllBooks();
+			for (BookDtls b : list) {
+			%>
 			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>
-					<a href="#" class="btn btn-primary">Edit</a>
-					<a href="#" class="btn btn-danger">Delete</a>
-				</td>
+				<td><%=b.getBookId() %></td>
+				<td><img src="../book/<%=b.getPhotoName()%>"
+					style="width:50px; height:50px;"></td>
+				<td><%=b.getBookname() %></td>
+				<td><%=b.getAuthor() %></td>
+				<td><%=b.getPrice() %></td>
+				<td><%=b.getBookCategory() %></td>
+				<td><%=b.getStatus() %></td>
+				<td><a href="#" class="btn btn-primary">Edit</a> <a href="#"
+					class="btn btn-danger">Delete</a></td>
 			</tr>
+			<%
+			}
+			%>
+
 
 		</tbody>
 	</table>
-	<div >
+	<div>
 		<%@include file="footer.jsp"%>
 	</div>
 </body>
