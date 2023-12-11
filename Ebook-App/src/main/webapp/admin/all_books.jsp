@@ -6,16 +6,27 @@
 <%@page import="com.DAO.BookDAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Admin: All Books</title>
+
 <%@include file="all_css.jsp"%>
 </head>
 <body>
 	<%@include file="navbar.jsp"%>
 	<h1 class="text-center mt-2">All Books</h1>
+	<c:if test="${not empty sucMsg}">
+		<p class="text-center text-success">${sucMsg}</p>
+		<c:remove var="sucMsg" scope="session" />
+	</c:if>
+	<c:if test="${not empty failedMsg }">
+		<p class="text-center text-danger">${failedMsg}</p>
+		<c:remove var="failedMsg" scope="session" />
+	</c:if>
 	<table class="table table-striped">
 		<thead class="bg-primary text-white">
 			<tr>
@@ -36,16 +47,17 @@
 			for (BookDtls b : list) {
 			%>
 			<tr>
-				<td><%=b.getBookId() %></td>
+				<td><%=b.getBookId()%></td>
 				<td><img src="../book/<%=b.getPhotoName()%>"
-					style="width:50px; height:50px;"></td>
-				<td><%=b.getBookname() %></td>
-				<td><%=b.getAuthor() %></td>
-				<td><%=b.getPrice() %></td>
-				<td><%=b.getBookCategory() %></td>
-				<td><%=b.getStatus() %></td>
-				<td><a href="#" class="btn btn-primary">Edit</a> <a href="#"
-					class="btn btn-danger">Delete</a></td>
+					style="width: 50px; height: 50px;"></td>
+				<td><%=b.getBookname()%></td>
+				<td><%=b.getAuthor()%></td>
+				<td><%=b.getPrice()%></td>
+				<td><%=b.getBookCategory()%></td>
+				<td><%=b.getStatus()%></td>
+				<td><a href="edit_book.jsp?id=<%=b.getBookId()%>"
+					class="btn btn-primary">Edit</a> <a
+					href="../delete?id=<%=b.getBookId()%>" class="btn btn-danger">Delete</a></td>
 			</tr>
 			<%
 			}

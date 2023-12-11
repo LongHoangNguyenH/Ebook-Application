@@ -48,7 +48,7 @@ public class BookDAOImpl implements BookDAO {
 			String sql = "select * from book_dtls";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
-			while(rs.next()) {
+			while (rs.next()) {
 				b = new BookDtls();
 				b.setBookId(rs.getInt(1));
 				b.setBookname(rs.getString(2));
@@ -64,6 +64,74 @@ public class BookDAOImpl implements BookDAO {
 			e.printStackTrace();
 		}
 		return list;
+	}
+
+	@Override
+	public BookDtls getBookbyId(int id) {
+		BookDtls b = null;
+		try {
+			String sql = "select * from book_dtls where bookid=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				b = new BookDtls();
+				b.setBookId(rs.getInt(1));
+				b.setBookname(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getString(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return b;
+	}
+
+	@Override
+	public boolean editBooks(BookDtls b) {
+		boolean f = false;
+		try {
+			String sql = "update book_dtls set bookname=?,author=?,price=?,status=? where BookId=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, b.getBookname());
+			ps.setString(2, b.getAuthor());
+			ps.setString(3, b.getPrice());
+			ps.setString(4, b.getStatus());
+			ps.setInt(5, b.getBookId());
+
+			int i = ps.executeUpdate();
+
+			if (i == 1) {
+				f = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return f;
+	}
+
+	@Override
+	public boolean deleteBooks(int id) {
+		boolean f = false;
+		try {
+			String sql = "delete from book_dtls where bookId=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
+			int i = ps.executeUpdate();
+			if (i == 1) {
+				f = true;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return f;
 	}
 
 }
