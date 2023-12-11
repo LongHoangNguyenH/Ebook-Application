@@ -12,14 +12,17 @@
 </head>
 <body style="background-color: #f0f1f2">
 	<%@include file="navbar.jsp"%>
+	
+	<c:if test="${empty userobj }">
+		<c:redirect url="../login.jsp" />
+	</c:if>
+	
 	<div class="container pt-2">
 		<div class="row">
 			<div class="col-md-4 offset-md-4">
 				<div class="card">
 					<div class="card-body">
-
 						<h4 class="text-center">Add Book</h4>
-
 						<c:if test="${not empty sucMsg}">
 							<p class="text-center text-success">${sucMsg}</p>
 							<c:remove var="sucMsg" scope="session" />

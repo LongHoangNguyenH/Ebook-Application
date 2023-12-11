@@ -18,6 +18,11 @@
 </head>
 <body>
 	<%@include file="navbar.jsp"%>
+	
+	<c:if test="${empty userobj }">
+		<c:redirect url="../login.jsp" />
+	</c:if>
+	
 	<h1 class="text-center mt-2">All Books</h1>
 	<c:if test="${not empty sucMsg}">
 		<p class="text-center text-success">${sucMsg}</p>
@@ -56,8 +61,10 @@
 				<td><%=b.getBookCategory()%></td>
 				<td><%=b.getStatus()%></td>
 				<td><a href="edit_book.jsp?id=<%=b.getBookId()%>"
-					class="btn btn-primary">Edit</a> <a
-					href="../delete?id=<%=b.getBookId()%>" class="btn btn-danger">Delete</a></td>
+					class="btn btn-primary"><i
+						class="fa-regular fa-pen-to-square mr-1"></i>Edit</a> <a
+					href="../delete?id=<%=b.getBookId()%>" class="btn btn-danger"><i
+						class="fa-solid fa-trash mr-1"></i>Delete</a></td>
 			</tr>
 			<%
 			}

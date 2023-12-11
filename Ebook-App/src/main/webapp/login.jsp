@@ -19,6 +19,10 @@
 						<h3 class="text-center">Login Page</h3>
 
 
+						<c:if test="${not empty sucMsg }">
+							<p class="text-center text-success">${sucMsg}</p>
+							<c:remove var="success" scope="session" />
+						</c:if>
 						<c:if test="${not empty failedMsg }">
 							<p class="text-center text-danger">${failedMsg}</p>
 							<c:remove var="failedMsg" scope="session" />
