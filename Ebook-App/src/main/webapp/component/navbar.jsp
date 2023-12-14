@@ -41,13 +41,13 @@
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
-			<li class="nav-item active"><a class="nav-link" href="#"><i
+			<li class="nav-item active"><a class="nav-link" href="index.jsp"><i
 					class="fas fa-house mr-2"></i>Home</a>
-			<li class="nav-item active"><a class="nav-link" href="#"><i
+			<li class="nav-item active"><a class="nav-link" href="all_recent_books.jsp"><i
 					class="fa-solid fa-bookmark mr-2"></i>Recent Book</a></li>
-			<li class="nav-item active"><a class="nav-link " href="#"><i
+			<li class="nav-item active"><a class="nav-link " href="all_new_books.jsp"><i
 					class="fa-solid fa-book mr-2"></i>New Book</a>
-			<li class="nav-item active"><a class="nav-link " href="#"><i
+			<li class="nav-item active"><a class="nav-link " href="all_old_books.jsp"><i
 					class="fa-solid fa-book-open-reader mr-2"></i>Old Book</a></li>
 		</ul>
 		<form class="form-inline my-2 my-lg-0">

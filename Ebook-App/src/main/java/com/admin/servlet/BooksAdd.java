@@ -41,6 +41,7 @@ public class BooksAdd extends HttpServlet{
 			if(f) {
 				
 				String path = getServletContext().getRealPath("") + "book";
+				System.out.println(path);
 				File file = new File(path);
 				part.write(path+File.separator+ filename);
 				
