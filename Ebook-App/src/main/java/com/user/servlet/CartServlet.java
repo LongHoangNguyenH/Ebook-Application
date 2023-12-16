@@ -15,7 +15,7 @@ import com.DB.DBConnect;
 import com.entity.BookDtls;
 import com.entity.Cart;
 
-@WebServlet("/cart")
+@WebServlet("/checkout")
 public class CartServlet extends HttpServlet {
 
 	@Override

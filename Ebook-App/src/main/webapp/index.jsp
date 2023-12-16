@@ -74,11 +74,24 @@
 							</div>
 						</div>
 							<%
+						}else{
+							%>
+							<div class="col">
+							<div class="row">
+								<a href="" class="btn btn-danger btn-sm ml-3 mb-1"
+									style="width: 180px"><i class="fa-solid fa-cart-plus mr-1"></i>Add
+									Cart</a> <a href="" class="btn btn-success btn-sm ml-3"
+									style="width: 110px"><i
+									class="fa-solid fa-circle-info mr-1"></i>View Details</a> <a
+									href="" class="btn btn-danger btn-sm ml-1" style="width: 65px"><i
+									class="fa-solid fa-dollar-sign mr-1"></i> <%=b.getPrice()%></a>
+							</div>
+						</div>
+							<%
 						}
 						%>
 						
-							
-
+						
 					</div>
 				</div>
 			</div>
@@ -128,7 +141,7 @@
 								<%
 								} else {
 								%>
-								<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=u.getId()%>"
+								<a href="checkout?bid=<%=b.getBookId()%>&&uid=<%=u.getId()%>"
 									class="btn btn-danger btn-sm ml-3 mb-1" style="width: 180px"><i
 									class="fa-solid fa-cart-plus mr-1"></i>Add Cart</a>
 								<%

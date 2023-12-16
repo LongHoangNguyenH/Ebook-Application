@@ -1,4 +1,5 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page isELIgnored="false"%>
 
 <div class="container-fluid"
 	style="height: 10px; background-color: 303f9f"></div>
@@ -19,13 +20,23 @@
 			</form>
 		</div>
 
-		<div class="col-md-3">
+		<c:if test="${not empty userobj }">
+			
+			<div class="col-md-3">
+				<a href="" class="btn btn-success"><i class="fas fa-user mr-1"></i>${userobj.name}</a> 
+				<a href="logout" class="btn btn-primary"><i class="fas fa-sign-in-alt mr-1"></i>Logout</a>
+				<a href="checkout.jsp" class="mt-3">
+					<i class="fa-solid fa-cart-shopping fa-2x"></i>				
+				</a>
+			</div>
+		</c:if>
+		<c:if test="${empty userobj}">
+			<div class="col-md-3">
+				<a href="login.jsp" class="btn btn-success"><i class="fa-solid fa-right-to-bracket mr-1"></i>Login</a> 
+				<a href="register.jsp" class="btn btn-primary"><i class="fa-solid fa-plus mr-1"></i>Register</a>
+			</div>
+		</c:if>
 
-			<a href="login.jsp" class="btn btn-success"><i
-				class="fa-solid fa-right-to-bracket mr-1"></i>Login</a> <a
-				href="register.jsp" class="btn btn-primary"><i
-				class="fa-solid fa-plus mr-1"></i>Register</a>
-		</div>
 	</div>
 </div>
 
@@ -43,18 +54,21 @@
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active"><a class="nav-link" href="index.jsp"><i
 					class="fas fa-house mr-2"></i>Home</a>
-			<li class="nav-item active"><a class="nav-link" href="all_recent_books.jsp"><i
-					class="fa-solid fa-bookmark mr-2"></i>Recent Book</a></li>
-			<li class="nav-item active"><a class="nav-link " href="all_new_books.jsp"><i
-					class="fa-solid fa-book mr-2"></i>New Book</a>
-			<li class="nav-item active"><a class="nav-link " href="all_old_books.jsp"><i
+			<li class="nav-item active"><a class="nav-link"
+				href="all_recent_books.jsp"><i class="fa-solid fa-bookmark mr-2"></i>Recent
+					Book</a></li>
+			<li class="nav-item active"><a class="nav-link "
+				href="all_new_books.jsp"><i class="fa-solid fa-book mr-2"></i>New
+					Book</a>
+			<li class="nav-item active"><a class="nav-link "
+				href="all_old_books.jsp"><i
 					class="fa-solid fa-book-open-reader mr-2"></i>Old Book</a></li>
 		</ul>
 		<form class="form-inline my-2 my-lg-0">
 
-			<button class="btn btn-light my-2 my-sm-0 mr-3" type="submit">
+			<a href="setting.jsp" class="btn btn-light my-2 my-sm-0 mr-3" type="submit">
 				<i class="fa-solid fa-gear mr-2"></i>Setting
-			</button>
+			</a>
 			<button class="btn btn-light my-2 my-sm-0 " type="submit">
 				<i class="fa-solid fa-file-contract mr-2"></i>Contact Us
 			</button>
