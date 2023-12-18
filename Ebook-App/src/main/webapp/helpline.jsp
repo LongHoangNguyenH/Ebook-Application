@@ -20,6 +20,6 @@
 			<a href="index.jsp" class=" btn btn-success">Home</a>
 		</div>
 	</div>
-	
 </body>
+<%@include file="component/footer.jsp"%>
 </html>

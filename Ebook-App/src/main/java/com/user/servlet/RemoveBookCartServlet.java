@@ -20,8 +20,9 @@ public class RemoveBookCartServlet extends HttpServlet {
 		try {
 			int bid = Integer.parseInt(req.getParameter("bid"));
 			int uid = Integer.parseInt(req.getParameter("uid"));
+			int cid = Integer.parseInt(req.getParameter("cid"));
 			CartDAOImpl dao = new CartDAOImpl(DBConnect.getConn());
-			boolean f = dao.deleteBook(bid, uid);
+			boolean f = dao.deleteBook(bid, uid, cid);
 			
 			HttpSession session = req.getSession();
 			
