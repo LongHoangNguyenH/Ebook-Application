@@ -4,59 +4,42 @@ This repo aims of `Book Store Web Application` is get more understanding of Java
 
 List of `Book Store Web Application` categories mentioned below
 
-## Contents
+# Contents
   - [Github README PROFILE CATEGORY](#github-readme-profile-category)
   - [List out `Book Store Web Application` Tools](#list-out-Book-Store-Web-Application-tools)
   - [List out `Book Store Web Application` Articles](#list-out-Book-Store-Web-Application-articles)
   - [Contribute](#contribute)
 
-## Website
+# Website
 
 Link : https://github.com/LongHoangNguyenH/Ebook-Application
 
 <a href="http://54.252.143.83:8090/EBook-App/index.jsp"><img src="https://raw.githubusercontent.com/elangosundar/awesome-README-templates/master/awesome-github-profile.png" alt="Awesome README Templates" /></a>
 
 
-## Github README PROFILE CATEGORY
+# Github README PROFILE CATEGORY
 
-### Tech Stack
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>   
-    <li><a href="[https://spring.io/projects/spring-boot/](https://docs.oracle.com/javaee%2F7%2Fapi%2F%2F/javax/servlet/Servlet.html#:~:text=A%20servlet%20is%20a%20small,servlet.)">Java Servlet</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.mysql.com/">Mysql</a></li>
-  </ul>
-</details>
-### Feature
-+ Admin 
+## Tech Stack
+- Server-side templating with JSP
+- Java Servlet
+- MySQL
+## Feature
+### Admin 
 - Mange Book/User (Add, Delete, Update)
 - Check orders
 - Dashboard
-+ User
+### User
 - Order Book
 - View Order
 - Create
 - Setting
 - Login/Logout
 
-### Installation
+## Installation
 Java version of this project is `Java JDK 17` 
 Install dependencies of Backend application at [pom.xml](https://github.com/LongHoangNguyenH/Ebook-Application/blob/main/Ebook-App/pom.xml).\\
 Server I used for this project is `Apache Tomcat 8.5.34`.\\
-### Run Locally
+## Run Locally
 Clone this project 
 ```
 clone https://github.com/LongHoangNguyenH/Ebook-Application.git
