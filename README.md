@@ -30,8 +30,7 @@ Link : https://github.com/LongHoangNguyenH/Ebook-Application
 <details>
   <summary>Server</summary>
   <ul>   
-    <li><a href="https://spring.io/projects/spring-boot/">Spring Boot</a></li>
-    
+    <li><a href="[https://spring.io/projects/spring-boot/](https://docs.oracle.com/javaee%2F7%2Fapi%2F%2F/javax/servlet/Servlet.html#:~:text=A%20servlet%20is%20a%20small,servlet.)">Java Servlet</a></li>
   </ul>
 </details>
 
@@ -42,44 +41,36 @@ Link : https://github.com/LongHoangNguyenH/Ebook-Application
   </ul>
 </details>
 ### Feature
-#### Admin 
-- Mange Role (Create, Delete, Update)
-- Manage Bookings
-- Manage User
-- Manage Available Room
++ Admin 
+- Mange Book/User (Add, Delete, Update)
+- Check orders
 - Dashboard
-#### User
-- Book/Cancel Room
-- Create/Delete Account
++ User
+- Order Book
+- View Order
+- Create
+- Setting
 - Login/Logout
 
 ### Installation
 Java version of this project is `Java JDK 17` 
-Install dependencies of Backend application at [pom.xml](https://github.com/LongHoangNguyenH/Ebook-Application/blob/main/Ebook-App/pom.xml)
-Server I used for this project is `Apache Tomcat 8.5.34`
+Install dependencies of Backend application at [pom.xml](https://github.com/LongHoangNguyenH/Ebook-Application/blob/main/Ebook-App/pom.xml).
+Server I used for this project is `Apache Tomcat 8.5.34`.
 ### Run Locally
 Clone this project 
 ```
 clone https://github.com/LongHoangNguyenH/Ebook-Application.git
 ```
-Open with Eclipse or IntelliJ, in my case it's Eclipse
-Install All dependencies and run with tomcat server
+Open with Eclipse or IntelliJ, in my case it's Eclipse.
+Install All dependencies and run with tomcat server.
 # List out `Book Store Web Application` Tools
-
 - [awesome-README-templates](https://github.com/elangosundar/awesome-README-templates) - Generate custom profile activity for your profile README
-
 # List out `Book Store Web Application` Articles
-
-
 - [Java Servlet Tutorial](https://github.com/RameshMF/servlet-tutorial) - Some First step that I have discovered and learn about java and servlet
 - [https://www.mysql.com/](https://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm) - Finding how to use jstl 
 ## :pencil: License
-
-
 This project is licensed under [MIT](https://opensource.org/licenses/MIT) license.
-
 ## :man_astronaut: Show your support
 Long Nguyen - [@linhedin-LongNguyenHoang](https://www.linkedin.com/in/long-nguyen-hoang-1141b225b/) - longnh.uit@gmail.com
-
 Project Link: [https://github.com/LongHoangNguyenH/BookingApplication](https://github.com/LongHoangNguyenH/BookingApplication) 
 
