@@ -54,14 +54,14 @@ Link : https://github.com/LongHoangNguyenH/Ebook-Application
 
 ### Installation
 Java version of this project is `Java JDK 17` 
-Install dependencies of Backend application at [pom.xml](https://github.com/LongHoangNguyenH/Ebook-Application/blob/main/Ebook-App/pom.xml).
-Server I used for this project is `Apache Tomcat 8.5.34`.
+Install dependencies of Backend application at [pom.xml](https://github.com/LongHoangNguyenH/Ebook-Application/blob/main/Ebook-App/pom.xml).\\
+Server I used for this project is `Apache Tomcat 8.5.34`.\\
 ### Run Locally
 Clone this project 
 ```
 clone https://github.com/LongHoangNguyenH/Ebook-Application.git
 ```
-Open with Eclipse or IntelliJ, in my case it's Eclipse.
+Open with Eclipse or IntelliJ, in my case it's Eclipse.\\
 Install All dependencies and run with tomcat server.
 # List out `Book Store Web Application` Tools
 - [awesome-README-templates](https://github.com/elangosundar/awesome-README-templates) - Generate custom profile activity for your profile README
