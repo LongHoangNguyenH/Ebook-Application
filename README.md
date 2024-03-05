@@ -12,7 +12,7 @@ List of `Book Store Web Application` categories mentioned below
 
 # Website
 
-Link : https://github.com/LongHoangNguyenH/Ebook-Application
+Link : http://54.252.143.83:8090/EBook-App/index.jsp
 
 <a href="http://54.252.143.83:8090/EBook-App/index.jsp"><img src="https://raw.githubusercontent.com/elangosundar/awesome-README-templates/master/awesome-github-profile.png" alt="Awesome README Templates" /></a>
 
